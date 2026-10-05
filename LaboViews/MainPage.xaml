@@ -7,9 +7,12 @@
         <VerticalStackLayout
             Padding="30,0"
             Spacing="225">
-
-            <Label>Hello World!</Label>
-
+            <Border WidthRequest="150" HeightRequest="150" Stroke="DarkGreen" StrokeThickness="4" StrokeShape="RoundRectangle 75">
+                <Border.Shadow>
+                    <Shadow Brush="DarkGrey" Offset="10,10" Radius="5" Opacity="1"></Shadow>
+                </Border.Shadow>
+                <Image Source="profile_picture.jpg" Aspect="AspectFill"></Image>
+            </Border>
         </VerticalStackLayout>
     </ScrollView>
 
