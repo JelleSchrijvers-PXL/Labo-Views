@@ -7,11 +7,30 @@
         <VerticalStackLayout
             Padding="30,0"
             Spacing="225">
-            <Border WidthRequest="150" HeightRequest="150" Stroke="DarkGreen" StrokeThickness="4" StrokeShape="RoundRectangle 75">
+            <Border  WidthRequest="150" HeightRequest="150" Stroke="DarkGreen" StrokeThickness="4" StrokeShape="RoundRectangle 75">
                 <Border.Shadow>
                     <Shadow Brush="DarkGrey" Offset="10,10" Radius="5" Opacity="1"></Shadow>
                 </Border.Shadow>
                 <Image Source="profile_picture.jpg" Aspect="AspectFill"></Image>
+            </Border>
+
+            <Border x:Name="BorderFront" BackgroundColor="Black" HeightRequest="120" Stroke="DarkGreen" StrokeThickness="4" StrokeShape="RoundRectangle 15, 0, 15 ,0">
+                <Border.Shadow>
+                    <Shadow Brush="DarkGray" Offset="10,10" Radius="5" Opacity="1"></Shadow>
+                </Border.Shadow>
+                <Border.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" NumberOfTapsRequired="1">
+
+                    </TapGestureRecognizer>
+                </Border.GestureRecognizers>
+                <Grid RowDefinitions="*, *, *" ColumnDefinitions="auto, *">
+                    <Border WidthRequest="100" Grid.RowSpan="3" StrokeShape="RoundRectangle 15">
+                        <Image Source="profile_picture.jpg" Aspect="AspectFill"></Image>
+                    </Border>
+                    <Label Grid.Column="1" Grid.Row="0" Text="Name: Lucas Martinez" FontAttributes="Bold" TextColor="White"></Label>
+                    <Label Grid.Column="1" Grid.Row="1" Text="Age: 24" TextColor="White"></Label>
+                    <Label Grid.Column="1" Grid.Row="2" Text="Occupation: Developper" TextColor="White"></Label>
+                </Grid>
             </Border>
         </VerticalStackLayout>
     </ScrollView>
